@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  background: #f9fbfc;
+}
+
+.header {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  padding: 100px 0;
+  gap: 20px;
+  color: #fff;
+  background: #1d539e;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.header p {
+  max-width: 553px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.card-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  top: 300px;
+  gap: 20px;
+  position: absolute;
+}
+
+.card-container .card {
+  height: 470px;
+  width: 355px;
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px rgba(142, 150, 185, 0.25);
+}
+
+.card-container .card.popular-card {
+  height: 490px;
+}
+
+.card-container .card .title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 30px 30px 20px;
+  color: #1e2338;
+}
+
+.card-container .card.popular-card .title {
+  height: 76px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 30px;
+  background: #ffcc29;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-container .card.popular-card .title div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 24px;
+  color: #fff;
+  background: #1d539e;
+  border-radius: 40px;
+}
+
+.card-container .card .content {
+  padding: 0 30px;
+}
+
+.card-container .card.popular-card .content {
+  padding: 10px 30px;
+}
+
+.card-container .card .content .price-container {
+  font-size: 18px;
+}
+
+.card-container .card .content .price-container .bold-number {
+  font-size: 36px;
+}
+
+.card-container .card .content .description {
+  display: block;
+  font-size: 14px;
+  padding: 10px 0 20px;
+  color: #828799;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.card-container .card .content .bonus {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+  gap: 20px;
+  color: #828799;
+}
+
+.card-container .card .content .bonus i {
+  margin-right: 18px;
+  color: #59ce9f;
+}
+
+.card-container .card button {
+  width: 296px;
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  bottom: 30px;
+  left: 30px;
+  padding: 12px 24px;
+  color: #1d539e;
+  background: none;
+  border: 1px solid #1d539e;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-container .card.popular-card button {
+  bottom: 40px;
+  color: #fff;
+  background: #1d539e;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    padding: 50px 0;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
